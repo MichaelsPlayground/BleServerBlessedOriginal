@@ -46,4 +46,4 @@ I activated the notification and now I'm getting the actual time provided by Ser
 ![heart_rate_data](https://github.com/MichaelsPlayground/BleServerBlessedOriginal/blob/master/docs/server07.png?raw=true)
 
 A note on writing data to the server: you need to know what the format is the server accepts for this 
-characteristic. Giving a wrong (=not accepted) value or not the neccessary amout of data will result in a failure.
+characteristic. Giving a wrong (=not accepted) value or not the necessary amout of data will result in a failure.
