@@ -16,7 +16,6 @@ Google's PlayStore:  https://play.google.com/store/apps/details?id=no.nordicsemi
 provide a simple manual on how to work with the nRF Connect-app here:
 [nRFConnect_manual](nrfconnect_manual.md)
 
-
 To get the Server app to build you need 2 additional dependencies, add them in build.gradle(app):
 ```plaintext
     implementation 'com.jakewharton.timber:timber:5.0.1'
@@ -44,6 +43,12 @@ Timber.plant(new Timber.DebugTree());
 ```
 This error is filed as a Timber issue and may get corrected in a newer version. The good news is - you 
 can build your app regardless of this error and you still see the logged messages in your LogCat.
+
+**Important notice when working with a emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal):  
+For security reasons the address the server can get connected is changing very so when using a client app 
+like the nRF Connect-app it is often neccessary to run a scan AND choose the newest entry (mostly the most 
+bottom down one).**
+
 
 Some technical details on this app:
 ```plaintext
