@@ -58,7 +58,6 @@ class BluetoothServer {
             return super.onCharacteristicRead(central, characteristic);
         }
 
-
         @Override
         public @NotNull GattStatus onCharacteristicWrite(@NotNull BluetoothCentral central, @NotNull BluetoothGattCharacteristic characteristic, @NotNull byte[] value) {
             Service serviceImplementation = serviceImplementations.get(characteristic.getService());
@@ -179,7 +178,6 @@ class BluetoothServer {
             peripheralManager.add(service);
         }
     }
-
 
     BluetoothServer(Context context) {
         Timber.plant(new Timber.DebugTree());

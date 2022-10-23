@@ -25,10 +25,10 @@ import timber.log.Timber;
 
 class CurrentTimeService extends BaseService {
 
-    private static final UUID CTS_SERVICE_UUID = UUID.fromString("00001805-0000-1000-8000-00805f9b34fb");
+    private static final UUID CURRENT_TIME_SERVICE_UUID = UUID.fromString("00001805-0000-1000-8000-00805f9b34fb");
     private static final UUID CURRENT_TIME_CHARACTERISTIC_UUID = UUID.fromString("00002A2B-0000-1000-8000-00805f9b34fb");
 
-    private @NotNull final BluetoothGattService service = new BluetoothGattService(CTS_SERVICE_UUID, BluetoothGattService.SERVICE_TYPE_PRIMARY);
+    private @NotNull final BluetoothGattService service = new BluetoothGattService(CURRENT_TIME_SERVICE_UUID, BluetoothGattService.SERVICE_TYPE_PRIMARY);
     private @NotNull final BluetoothGattCharacteristic currentTime = new BluetoothGattCharacteristic(CURRENT_TIME_CHARACTERISTIC_UUID, PROPERTY_READ | PROPERTY_NOTIFY | PROPERTY_WRITE, PERMISSION_READ | PERMISSION_WRITE);
     private @NotNull final Handler handler = new Handler(Looper.getMainLooper());
     private @NotNull final Runnable notifyRunnable = this::notifyCurrentTime;

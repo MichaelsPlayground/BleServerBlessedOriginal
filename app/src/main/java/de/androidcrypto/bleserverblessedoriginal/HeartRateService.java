@@ -20,10 +20,10 @@ import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_PRIMARY;
 
 class HeartRateService extends BaseService {
 
-    private static final UUID HRS_SERVICE_UUID = UUID.fromString("0000180D-0000-1000-8000-00805f9b34fb");
+    private static final UUID HEARTRATE_SERVICE_UUID = UUID.fromString("0000180D-0000-1000-8000-00805f9b34fb");
     private static final UUID HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID = UUID.fromString("00002A37-0000-1000-8000-00805f9b34fb");
 
-    private @NotNull final BluetoothGattService service = new BluetoothGattService(HRS_SERVICE_UUID, SERVICE_TYPE_PRIMARY);
+    private @NotNull final BluetoothGattService service = new BluetoothGattService(HEARTRATE_SERVICE_UUID, SERVICE_TYPE_PRIMARY);
     private @NotNull final BluetoothGattCharacteristic measurement = new BluetoothGattCharacteristic(HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID, PROPERTY_READ | PROPERTY_INDICATE, PERMISSION_READ);
     private @NotNull final Handler handler = new Handler(Looper.getMainLooper());
     private @NotNull final Runnable notifyRunnable = this::notifyHeartRate;
