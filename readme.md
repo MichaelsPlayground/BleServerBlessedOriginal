@@ -47,7 +47,7 @@ can build your app regardless of this error and you still see the logged message
 
 **Important notice when working with an emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal): 
 For security reasons the address the server can get connected is changing very often so when using a client app 
-like the nRF Connect-app it is often neccessary to (re)run a scan AND choose the newest entry (mostly the most  
+like the nRF Connect-app it is often necessary to (re)run a scan AND choose the newest entry (mostly the most  
 bottom down one).**
 
 

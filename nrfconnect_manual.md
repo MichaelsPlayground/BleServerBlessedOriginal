@@ -10,7 +10,7 @@
 
 **Important notice when working with a emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal): 
 For security reasons the address the server can get connected is changing very often so when using the nRF Connect-app 
-it is often neccessary to (re)run a scan AND choose the newest entry (mostly the most bottom down one).**
+it is often necessary to (re)run a scan AND choose the newest entry (mostly the most bottom down one).**
 
 ![published_services](https://github.com/MichaelsPlayground/BleServerBlessedOriginal/blob/master/docs/server02.png?raw=true)
 
