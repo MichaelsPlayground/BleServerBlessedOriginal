@@ -3,7 +3,7 @@
 This is the original BLE Peripheral (server) example using the code in 
 https://github.com/weliem/bluetooth-server-example.
 
-The code is unchanged to get a basis for further enhancements.
+The code is minimal changed to get a basis for further enhancements.
 
 The library in use (ANDROID-BLESSED) is available here: https://github.com/weliem/blessed-android.
 
