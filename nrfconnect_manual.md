@@ -9,7 +9,7 @@
 3) press connect to start the connection with the server and see the services that are published by the server:
 
 **Important notice when working with a emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal): 
-For security reasons the address the server can get connected is changing very so when using the nRF Connect-app 
+For security reasons the address the server can get connected is changing very often so when using the nRF Connect-app 
 it is often neccessary to (re)run a scan AND choose the newest entry (mostly the most bottom down one).**
 
 ![published_services](https://github.com/MichaelsPlayground/BleServerBlessedOriginal/blob/master/docs/server02.png?raw=true)

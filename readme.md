@@ -1,6 +1,6 @@
 # Bluetooth Low Energy Server with ANDROID-BLESSED library (original)
 
-This is the original BLE Peripheral (server) example using the code in  
+This is the original BLE Peripheral (server) example using the code in 
 https://github.com/weliem/bluetooth-server-example.
 
 The code is unchanged to get a basis for further enhancements.
@@ -8,7 +8,7 @@ The code is unchanged to get a basis for further enhancements.
 The library in use (ANDROID-BLESSED) is available here: https://github.com/weliem/blessed-android.
 
 For a general overview on Bluetooth Low Energy (BLE) see this perfect article "The Ultimate Guide to Android Bluetooth Low Energy", 
-available as PDF in the docs folder: https://punchthrough.com/android-ble-guide/.
+available as PDF in the docs folder as well: https://punchthrough.com/android-ble-guide/.
 
 To check that the server is up and running I recommend to install another app on a second device that 
 allows to connect to the "Server", I'm using **nRF Connect for Mobile** and it is available on the 
@@ -45,14 +45,15 @@ This error is filed as a Timber issue and may get corrected in a newer version. 
 can build your app regardless of this error and you still see the logged messages in your LogCat.
 
 **Important notice when working with an emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal): 
-For security reasons the address the server can get connected is changing very so when using a client app 
+For security reasons the address the server can get connected is changing very often so when using a client app 
 like the nRF Connect-app it is often neccessary to (re)run a scan AND choose the newest entry (mostly the most  
 bottom down one).**
 
 
 Some technical details on this app:
 ```plaintext
-Minimum SDK is 21, compiled/target SDK is 33
+minimum SDK is 21
+compiled/target SDK is 33
 Gradle version is 7.4
 ```
 
