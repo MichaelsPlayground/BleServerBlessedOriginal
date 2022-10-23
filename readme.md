@@ -37,6 +37,10 @@ dependencyResolutionManagement {
 }
 ```
 
+You may notice that the AndroidManifest.xml does not contain any Bluetooth related permissions - they are all  
+set within the library but you are asked to grant some runtime permissions during startup (depending on the Android 
+SDK version running on your Smartphone the server is running on).
+
 Notice regarding a bug in the blessed-library's log system: in BluetoothServer.java you will notice an 
 "error" on line 185 ("Cannot resolve method 'plant(timber.log.Timber.DebugTree)'"):
 ```plaintext
