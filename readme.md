@@ -11,12 +11,13 @@ For a general overview on Bluetooth Low Energy (BLE) see this perfect article "T
 available as PDF in the docs folder: https://punchthrough.com/android-ble-guide/.
 
 To check that the server is up and running I recommend to install another app on a second device that 
-allows to connect to the "Server", I'm using "nRF Connect for Mobile" and it is available on the 
-Google's PlayStore:  https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=de&gl=US
+allows to connect to the "Server", I'm using **nRF Connect for Mobile** and it is available on the 
+Google's PlayStore:  https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=de&gl=US. I 
+provide a simple manual on how to work with the nRF Connect-app here:
+[nRFConnect_manual](nrfconnect_manual.md)
 
 
-
-To get the app to build you need 2 additional dependencies, add them in build.gradle(app):
+To get the Server app to build you need 2 additional dependencies, add them in build.gradle(app):
 ```plaintext
     implementation 'com.jakewharton.timber:timber:5.0.1'
     implementation 'com.github.weliem:blessed-android:2.3.4'
