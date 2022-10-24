@@ -3,12 +3,13 @@
 This is the original BLE Peripheral (server) example using the code in 
 https://github.com/weliem/bluetooth-server-example.
 
-The code is minimal changed to get a basis for further enhancements.
+The code is minimal changed to get a basis for further enhancements and to be compatible with the 
+sample client-app of the library (see below).
 
-The library in use (ANDROID-BLESSED) is available here: https://github.com/weliem/blessed-android 
+The library in use (BLESSED-ANDROID) is available here: https://github.com/weliem/blessed-android 
 provided by **Martijn van Welie**.
 
-For a general overview on Bluetooth Low Energy (BLE) see this perfect article "The Ultimate Guide to Android Bluetooth Low Energy", 
+For a general overview on Bluetooth Low Energy (BLE) see this perfect article: "The Ultimate Guide to Android Bluetooth Low Energy", 
 available as PDF in the docs folder as well: https://punchthrough.com/android-ble-guide/.
 
 To check that the server is up and running I recommend to install another app on a second device that 
@@ -42,12 +43,12 @@ set within the library but you are asked to grant some runtime permissions durin
 SDK version running on your Smartphone the server is running on).
 
 Notice regarding a bug in the blessed-library's log system: in BluetoothServer.java you will notice an 
-"error" on line 185 ("Cannot resolve method 'plant(timber.log.Timber.DebugTree)'"):
+"error" on line 183 ("Cannot resolve method 'plant(timber.log.Timber.DebugTree)'"):
 ```plaintext
 Timber.plant(new Timber.DebugTree());
 ```
 This error is filed as a Timber issue and may get corrected in a newer version. The good news is - you 
-can build your app regardless of this error and you still see the logged messages in your LogCat.
+can build your app regardless of this "error" and you still see the logged messages in your LogCat.
 
 **Important notice when working with an emulated device running on a Smartphone (e.g. the BleServerBlessedOriginal): 
 For security reasons the address the server can get connected is changing very often so when using a client app 
@@ -62,4 +63,4 @@ compiled/target SDK is 33
 Gradle version is 7.4
 ```
 
-
+The library blessed-android is MIT-licensed.

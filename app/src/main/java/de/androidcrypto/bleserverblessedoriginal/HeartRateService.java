@@ -20,11 +20,11 @@ import static android.bluetooth.BluetoothGattService.SERVICE_TYPE_PRIMARY;
 
 class HeartRateService extends BaseService {
 
-    private static final UUID HEARTRATE_SERVICE_UUID = UUID.fromString("0000180D-0000-1000-8000-00805f9b34fb");
-    private static final UUID HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID = UUID.fromString("00002A37-0000-1000-8000-00805f9b34fb");
+    private static final UUID HEART_RATE_SERVICE_UUID = UUID.fromString("0000180D-0000-1000-8000-00805f9b34fb");
+    private static final UUID HEART_RATE_MEASUREMENT_CHARACTERISTIC_UUID = UUID.fromString("00002A37-0000-1000-8000-00805f9b34fb");
 
-    private @NotNull final BluetoothGattService service = new BluetoothGattService(HEARTRATE_SERVICE_UUID, SERVICE_TYPE_PRIMARY);
-    private @NotNull final BluetoothGattCharacteristic measurement = new BluetoothGattCharacteristic(HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID, PROPERTY_READ | PROPERTY_INDICATE, PERMISSION_READ);
+    private @NotNull final BluetoothGattService service = new BluetoothGattService(HEART_RATE_SERVICE_UUID, SERVICE_TYPE_PRIMARY);
+    private @NotNull final BluetoothGattCharacteristic measurement = new BluetoothGattCharacteristic(HEART_RATE_MEASUREMENT_CHARACTERISTIC_UUID, PROPERTY_READ | PROPERTY_INDICATE, PERMISSION_READ);
     private @NotNull final Handler handler = new Handler(Looper.getMainLooper());
     private @NotNull final Runnable notifyRunnable = this::notifyHeartRate;
     private int currentHR = 80;
@@ -44,7 +44,7 @@ class HeartRateService extends BaseService {
 
     @Override
     public ReadResponse onCharacteristicRead(@NotNull BluetoothCentral central, @NotNull BluetoothGattCharacteristic characteristic) {
-        if (characteristic.getUuid().equals(HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
+        if (characteristic.getUuid().equals(HEART_RATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
             return new ReadResponse(GattStatus.SUCCESS, new byte[]{0x00, 0x40});
         }
         return super.onCharacteristicRead(central, characteristic);
@@ -52,14 +52,14 @@ class HeartRateService extends BaseService {
 
     @Override
     public void onNotifyingEnabled(@NotNull BluetoothCentral central, @NotNull BluetoothGattCharacteristic characteristic) {
-        if (characteristic.getUuid().equals(HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
+        if (characteristic.getUuid().equals(HEART_RATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
             notifyHeartRate();
         }
     }
 
     @Override
     public void onNotifyingDisabled(@NotNull BluetoothCentral central, @NotNull BluetoothGattCharacteristic characteristic) {
-        if (characteristic.getUuid().equals(HEARTRATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
+        if (characteristic.getUuid().equals(HEART_RATE_MEASUREMENT_CHARACTERISTIC_UUID)) {
             stopNotifying();
         }
     }

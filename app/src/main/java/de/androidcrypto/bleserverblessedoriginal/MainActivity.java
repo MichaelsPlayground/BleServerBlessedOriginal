@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
@@ -19,6 +20,12 @@ import java.util.List;
 
 import timber.log.Timber;
 
+/**
+ * This app is taken from https://github.com/weliem/bluetooth-server-example
+ * I modified the example very slightly to be compatible to the example app
+ * for the library blessed-android (https://github.com/weliem/blessed-android)
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -30,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     protected void onResume() {
         super.onResume();
