@@ -32,7 +32,7 @@ class HeartRateService extends BaseService {
     public HeartRateService(@NotNull BluetoothPeripheralManager peripheralManager) {
         super(peripheralManager);
         service.addCharacteristic(measurement);
-        measurement.addDescriptor(getCccDescriptor());
+        measurement.addDescriptor(getClientCharacteristicConfigurationDescriptor());
     }
 
     @Override

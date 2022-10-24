@@ -37,8 +37,8 @@ class CurrentTimeService extends BaseService {
     public CurrentTimeService(@NotNull BluetoothPeripheralManager peripheralManager) {
         super(peripheralManager);
         service.addCharacteristic(currentTime);
-        currentTime.addDescriptor(getCccDescriptor());
-        currentTime.addDescriptor(getCudDescriptor());
+        currentTime.addDescriptor(getClientCharacteristicConfigurationDescriptor());
+        currentTime.addDescriptor(getCharacteristicUserDescriptionDescriptor());
     }
 
     @Override

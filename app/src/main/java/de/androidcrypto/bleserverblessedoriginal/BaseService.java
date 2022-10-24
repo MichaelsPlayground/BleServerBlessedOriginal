@@ -21,8 +21,8 @@ import androidx.annotation.NonNull;
 
 class BaseService implements Service {
 
-    public static final UUID CUD_DESCRIPTOR_UUID = UUID.fromString("00002901-0000-1000-8000-00805f9b34fb");
-    public static final UUID CCC_DESCRIPTOR_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
+    public static final UUID CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR_UUID = UUID.fromString("00002901-0000-1000-8000-00805f9b34fb");
+    public static final UUID CLIENT_CHARACTERISTIC_CONFIGURATION_DECSRIPTOR_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
 
     @NotNull
     protected final BluetoothPeripheralManager peripheralManager;
@@ -31,12 +31,12 @@ class BaseService implements Service {
         this.peripheralManager = Objects.requireNonNull(peripheralManager);
     }
 
-    BluetoothGattDescriptor getCccDescriptor() {
-        return new BluetoothGattDescriptor(CCC_DESCRIPTOR_UUID, PERMISSION_READ | PERMISSION_WRITE);
+    BluetoothGattDescriptor getClientCharacteristicConfigurationDescriptor() {
+        return new BluetoothGattDescriptor(CLIENT_CHARACTERISTIC_CONFIGURATION_DECSRIPTOR_UUID, PERMISSION_READ | PERMISSION_WRITE);
     }
 
-    BluetoothGattDescriptor getCudDescriptor() {
-        return new BluetoothGattDescriptor(CUD_DESCRIPTOR_UUID, PERMISSION_READ | PERMISSION_WRITE);
+    BluetoothGattDescriptor getCharacteristicUserDescriptionDescriptor() {
+        return new BluetoothGattDescriptor(CHARACTERISTIC_USER_DESCRIPTION_DESCRIPTOR_UUID, PERMISSION_READ | PERMISSION_WRITE);
     }
 
     protected void notifyCharacteristicChanged(final byte[] value, @NotNull final BluetoothGattCharacteristic characteristic) {
