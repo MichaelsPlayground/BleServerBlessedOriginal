@@ -70,7 +70,6 @@ class HeartRateService extends BaseService {
         final byte[] value = new byte[]{0x00, (byte) currentHR};
         notifyCharacteristicChanged(value, measurement);
         handler.postDelayed(notifyRunnable, 1000);
-
         Timber.i("new hr: %d", currentHR);
     }
 
