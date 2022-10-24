@@ -47,3 +47,4 @@ I activated the notification and now I'm getting the actual time provided by Ser
 
 A note on writing data to the server: you need to know what the format is the server accepts for this 
 characteristic. Giving a wrong (=not accepted) value or not the necessary amount of data will result in a failure.
+ 
