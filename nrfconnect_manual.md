@@ -4,10 +4,6 @@
 
 2) start the app and the BLE server on a second device, press "scan" if the server is not found 
 
-[nRFConnect_manual](nrfconnect_manual.md)
-
-![found server](docs/server01.png?raw=true)
-
 ![found server](https://github.com/MichaelsPlayground/BleServerBlessedOriginal/blob/master/docs/server01.png?raw=true)
 
 3) press connect to start the connection with the server and see the services that are published by the server:
