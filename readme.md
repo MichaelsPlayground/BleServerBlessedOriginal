@@ -14,7 +14,7 @@ available as PDF in the docs folder as well: https://punchthrough.com/android-bl
 
 To check that the server is up and running I recommend to install another app on a second device that 
 allows to connect to the "Server", I'm using **nRF Connect for Mobile** and it is available on the 
-Google's PlayStore:  https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=de&gl=US. I  
+Google's PlayStore:  https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=de&gl=US. I   
 provide a simple manual on how to work with the nRF Connect-app here: 
 [nRFConnect_manual](nrfconnect_manual.md) or my article on Medium: 
 https://medium.com/@androidcrypto/connect-the-android-nrf-connect-mobile-app-with-a-bluetooth-low-energy-device-8ba900d70286
